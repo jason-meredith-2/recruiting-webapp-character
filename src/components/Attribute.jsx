@@ -6,13 +6,15 @@ const Attribute = (props) => {
   const value = useSelector(state => state.attribute[props.name])
   const dispatch = useDispatch();
 
+  const modifier = Math.floor((value - 10) / 2);
+
   return (
     <tr>
       <td>
         {props.name}:
       </td>
       <td>
-        {value}
+        {value} (Modifier: {modifier})
         <button
           onClick={() => dispatch(decrease(props.name))}
         >
