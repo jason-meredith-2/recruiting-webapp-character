@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import './App.css';
+import AttributeTable from './components/AttributeTable';
 import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
 
 
 function App() {
-  const [num, setNum] = useState(0);
   return (
     <div className="App">
       <header className="App-header">
@@ -12,10 +11,7 @@ function App() {
       </header>
       <section className="App-section">
         <div>
-          Value:
-          {num}
-          <button>+</button>
-          <button>-</button>
+          <AttributeTable />
         </div>
       </section>
     </div>
