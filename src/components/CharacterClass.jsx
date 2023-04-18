@@ -34,7 +34,7 @@ const CharacterClass = (props) => {
     let qualifies = true;
 
     ATTRIBUTE_LIST.forEach(attribute => {
-      if (attributes[attribute] < CLASS_LIST[props.name][attribute]) {
+      if (attributes[attribute].value < CLASS_LIST[props.name][attribute]) {
         qualifies = false;
       }
     })

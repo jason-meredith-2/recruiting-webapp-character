@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import AttributeTable from './components/AttributeTable';
 import CharacterClass from './components/CharacterClass';
+import SkillsTable from './components/SkillsTable';
 import { ATTRIBUTE_LIST, CLASS_LIST, SKILL_LIST } from './consts.js';
 
 
@@ -21,6 +22,7 @@ function App() {
         <div>
           <AttributeTable />
           {characterClasses()}
+          <SkillsTable />
         </div>
       </section>
     </div>

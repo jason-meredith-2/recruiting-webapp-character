@@ -3,10 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { increase, decrease } from "../reducers/attributeSlice";
 
 const Attribute = (props) => {
-  const value = useSelector(state => state.attribute[props.name])
+  const { value, modifier } = useSelector(state => state.attribute[props.name])
   const dispatch = useDispatch();
-
-  const modifier = Math.floor((value - 10) / 2);
 
   return (
     <tr>
